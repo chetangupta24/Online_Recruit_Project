@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="resumeModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="ApplicantsProfile">
+    <Key>
+      <PropertyRef Name="ApplicantID" />
+    </Key>
+    <Property Name="ApplicantID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EducationalQualification" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PreviousCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YearsOfExperience" Type="Int32" />
+    <Property Name="ApplicantAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicantResume" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="resumeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ApplicantsProfiles" EntityType="Self.ApplicantsProfile" />
+  </EntityContainer>
+</Schema>

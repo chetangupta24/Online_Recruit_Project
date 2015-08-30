@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="resumeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="ApplicantsProfile">
+    <Key>
+      <PropertyRef Name="ApplicantID" />
+    </Key>
+    <Property Name="ApplicantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="EmailID" Type="nvarchar" MaxLength="50" />
+    <Property Name="EducationalQualification" Type="nvarchar" MaxLength="50" />
+    <Property Name="PreviousCompany" Type="nvarchar" MaxLength="50" />
+    <Property Name="YearsOfExperience" Type="int" />
+    <Property Name="ApplicantAddress" Type="nvarchar" MaxLength="150" />
+    <Property Name="ApplicantResume" Type="nvarchar" MaxLength="400" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="resumeModelStoreContainer">
+    <EntitySet Name="ApplicantsProfile" EntityType="Self.ApplicantsProfile" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

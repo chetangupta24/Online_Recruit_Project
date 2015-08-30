@@ -1,0 +1,110 @@
+﻿@model OnlineRecruitApp.ApplicantsProfile
+@{
+    ViewBag.Title = "Share your Profile";
+}
+
+
+<table class="table" style="width:600px">
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+           
+            <td>@Html.LabelFor(model => model.FirstName) </td>
+            <td><input type="text" data-ng-model="applicant.FirstName" /></td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.LastName)</td>
+            <td><input type="text" data-ng-model="applicant.LastName" /></td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.PhoneNo) </td>
+            <td><input type="text" data-ng-model="applicant.PhoneNo" /></td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.EmailID) </td>
+            <td><input type="text" data-ng-model="applicant.EmailID" /></td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.EducationalQualification) </td>
+            <td><input type="text" data-ng-model="applicant.EducationalQualification" /></td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.PreviousCompany) </td>
+            <td><input type="text" data-ng-model="applicant.PreviousCompany" /></td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.YearsOfExperience) </td>
+            <td><input type="text" data-ng-model="applicant.YearsOfExperience" /></td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.ApplicantAddress) </td>
+            <td><input type="text" data-ng-model="applicant.ApplicantAddress" /></td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.ApplicantResume) </td>
+            <td><input type="text" data-ng-model="applicant.ApplicantResume" /></td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Comments) </td>
+            <td><input type="text" data-ng-model="applicant.Comments" /></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" data-ng-click="save()" value="Save" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<div style="text-align:center; width:550px">
+    <table class="table table-striped">
+        <thead>
+            <tr> Applicant Profile Details
+            </tr>
+        </thead>
+       
+    </table>
+    </div>
+
+    <div style="text-align:center; width:550px">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone No</th>
+                    <th>Email ID</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="item in Applicantlist">
+                    <td>{{item.FirstName}}</td>
+                    <td>{{item.LastName}}</td>
+                    <td>{{item.PhoneNo}}</td>
+                    <td>{{item.EmailID}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+

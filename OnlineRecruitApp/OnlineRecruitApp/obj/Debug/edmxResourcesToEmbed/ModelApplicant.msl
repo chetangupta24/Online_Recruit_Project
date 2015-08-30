@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="resumeModelStoreContainer" CdmEntityContainer="resumeEntities">
+    <EntitySetMapping Name="ApplicantsProfiles">
+      <EntityTypeMapping TypeName="resumeModel.ApplicantsProfile">
+        <MappingFragment StoreEntitySet="ApplicantsProfile">
+          <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="EducationalQualification" ColumnName="EducationalQualification" />
+          <ScalarProperty Name="PreviousCompany" ColumnName="PreviousCompany" />
+          <ScalarProperty Name="YearsOfExperience" ColumnName="YearsOfExperience" />
+          <ScalarProperty Name="ApplicantAddress" ColumnName="ApplicantAddress" />
+          <ScalarProperty Name="ApplicantResume" ColumnName="ApplicantResume" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

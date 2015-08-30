@@ -1,0 +1,32 @@
+﻿@model OnlineRecruitApp.ApplicantsProfile
+
+
+<h2>ApplicantDetails</h2>
+<div ng-view></div>
+@section scripts{
+    <h1>Testing</h1>
+    <script src="~/Scripts/angularJS/AppDetails.js"></script>
+    <script src="~/Scripts/angularJS/routeconfigAppDetails.js"></script>
+}
+<div style="text-align:center; width:550px">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone No</th>
+                <th>Email ID</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="item in Applicantlist">
+                <td>{{item.FirstName}}</td>
+                <td>{{item.LastName}}</td>
+                <td>{{item.PhoneNo}}</td>
+                <td>{{item.EmailID}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
